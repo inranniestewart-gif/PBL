@@ -1,4 +1,3 @@
-
 #ifndef SKIPQUEUE_H
 #define SKIPQUEUE_H
 
@@ -10,7 +9,8 @@ class SkipQueue {
 
 public:
     void add(int k);
-    int next();    
+    int next();
+    void undo();    // reverses one next() rotation
 };
 
 #endif

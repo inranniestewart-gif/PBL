@@ -20,6 +20,8 @@ public:
 
     void add(const Player& p);      
     void removeAfter(Node* prev);    
+    void insertAfter(Node* prev, const Player& p, bool becomesTail);
+    Node* findById(int id);
     Node* head();
     Node* tail();
     int size();

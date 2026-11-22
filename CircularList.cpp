@@ -35,6 +35,24 @@ void CircularList::removeAfter(Node* prev) {
     count--;
 }
 
+void CircularList::insertAfter(Node* prev, const Player& p, bool becomesTail) {
+    Node* n = new Node(p);
+    n->next = prev->next;
+    prev->next = n;
+    if (becomesTail) last = n;
+    count++;
+}
+
+Node* CircularList::findById(int id) {
+    if (!last) return nullptr;
+    Node* cur = last->next;
+    do {
+        if (cur->player.id == id) return cur;
+        cur = cur->next;
+    } while (cur != last->next);
+    return nullptr;
+}
+
 Node* CircularList::head() { return last->next; }
 Node* CircularList::tail() { return last; }
 int CircularList::size() { return count; }
