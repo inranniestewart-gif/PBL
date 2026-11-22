@@ -10,7 +10,7 @@ class SkipQueue {
 public:
     void add(int k);
     int next();
-    void undo();    // reverses one next() rotation
+    void undo();   
 };
 
 #endif

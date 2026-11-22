@@ -9,8 +9,8 @@ class Player {
 public:
     int id;
     string name;
-    int weight;      // fairness mode: higher weight = safer (default 1)
-    int immunity;    // immunity tokens left; one is spent when the player is targeted
+    int weight;     
+    int immunity;   
 
     Player(int id = 0, string name = "") : id(id), name(name), weight(1), immunity(0) {}
     ~Player() {}
